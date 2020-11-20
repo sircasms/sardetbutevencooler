@@ -104,7 +104,7 @@ module.exports.run = async (bot, message, args) => {
                 })
             
                 cooldowns[user.id].daily = Date.now();
-                fs.writeFile("./daily.json", JSON.stringify(cooldowns), err => {
+                fs.writeFile("./cooldowns.json", JSON.stringify(cooldowns), err => {
                     if (err) console.log(err);
                 })
             
